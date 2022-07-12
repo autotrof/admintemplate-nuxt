@@ -1,5 +1,6 @@
-# admintemplate-nuxt2
-
+# admintemplate-nuxt
+Template Admin, dibuat dengan nuxtjs & tailwindcss. feel free untuk mencoba.
+SEDANG DALAM TAHAP PENGEMBANGAN
 ## Build Setup
 
 ```bash
