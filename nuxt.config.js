@@ -62,5 +62,10 @@ export default {
         autoprefixer: {},
       },
     }
+  },
+
+  generate: {
+    dir: 'public',
+    subFolders: false
   }
 }

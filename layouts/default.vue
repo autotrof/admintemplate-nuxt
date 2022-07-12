@@ -116,9 +116,9 @@
         <div class="profile-menu-wrapper" v-show="profile_menu_opened" ref="profile_menu_section">
           <div v-html="triangle_icon" class="absolute -top-[13px] right-7"></div>
           <ul>
-            <li><a href="/">Akun</a></li>
-            <li><a href="/">Log</a></li>
-            <li><a href="/" class="danger">Logout</a></li>
+            <li><NuxtLink to="/profil">Akun</NuxtLink></li>
+            <li><NuxtLink to="/log">Log</NuxtLink></li>
+            <li><NuxtLink to="/logout" class="danger">Logout</NuxtLink></li>
           </ul>
         </div>
       </div>
@@ -126,12 +126,12 @@
     <div id="main-content-wrapper">
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
-          <li><a class="active" href="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</a></li>
-          <li><a href="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</a></li>
-          <li><a href="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</a></li>
-          <li><a href="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</a></li>
-          <li><a href="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</a></li>
-          <li><a href="/report"><i class="mr-2" v-html="report_icon"></i> Report</a></li>
+          <li><NuxtLink to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
+          <li><NuxtLink to="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</NuxtLink></li>
+          <li><NuxtLink to="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</NuxtLink></li>
+          <li><NuxtLink to="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</NuxtLink></li>
+          <li><NuxtLink to="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</NuxtLink></li>
+          <li><NuxtLink to="/report"><i class="mr-2" v-html="report_icon"></i> Report</NuxtLink></li>
         </ul>
       </aside>
       <div id="main-content">

@@ -1,5 +1,5 @@
 <template>
-  <div>HALO GUYS</div>
+  <div></div>
 </template>
 
 <script>
@@ -7,9 +7,9 @@ const feather = require('feather-icons')
 export default {
   created(){
     const page_title_data = {
-      title:'DASHBOARD',
-      icon:feather.icons['bar-chart-2'].toSvg({
-        class:"mr-1 text-primary",
+      title:'Uang Keluar',
+      icon:feather.icons['log-out'].toSvg({
+        class:"mr-1 text-primary -rotate-90",
         width:20,
         height:20
       })
