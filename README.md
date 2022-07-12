@@ -1,6 +1,10 @@
 # admintemplate-nuxt
 Template Admin, dibuat dengan nuxtjs & tailwindcss. feel free untuk mencoba.
 SEDANG DALAM TAHAP PENGEMBANGAN
+
+# LIVE DEMO
+[demo page](https://template.agungkurniawan.com).
+
 ## Build Setup
 
 ```bash
