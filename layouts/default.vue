@@ -1,0 +1,218 @@
+
+<script>
+  const img_profile_src = require('../static/user.jpg')
+  const feather = require('feather-icons')
+  const menu_icon1 = feather.icons['align-left']
+  const menu_icon2 = feather.icons['align-justify']
+  const chart_icon = feather.icons['bar-chart-2']
+  const uang_masuk_icon = feather.icons.download
+  const uang_keluar_icon = feather.icons['log-out']
+  const users_icon = feather.icons['users']
+  const report_icon = feather.icons['file-text']
+  const triangle_icon = feather.icons.triangle
+  const menu_icons_attrs = {
+    width:14,
+    height:14,
+    'stroke-width':3
+  }
+
+  export default {
+    data(){
+      return {
+        img_profile_src,
+        profile_menu_opened:false,
+        sidebar_shown:false,
+        documentClickHandler:event=>{
+          if(event.target==this.$refs.img_profile) return;
+          if(this.$refs.profile_menu_section){
+            const isClickInside = this.$refs.profile_menu_section.contains(event.target);
+            if (!isClickInside) this.profile_menu_opened = false
+          }
+        }
+      }
+    },
+    methods:{
+      toggleProfileMenu(){
+        this.profile_menu_opened = !this.profile_menu_opened
+      },
+      toggleSidebar(){
+        this.sidebar_shown = !this.sidebar_shown
+      }
+    },
+    computed:{
+      title_prop(){
+        return {
+          page_title:this.$store.state.page_title,
+          page_title_icon:this.$store.state.page_title_icon
+        }
+      },
+      year(){ 
+        return (new Date()).getFullYear()
+      },
+      sidebar_width(){
+        return '200px'
+      },
+      triangle_icon(){
+        return triangle_icon.toSvg({
+          class:"text-white",
+          width:16,
+          height:16,
+          fill:'#FFF',
+          "stroke-width":0
+        })
+      },
+      menu_icon(){
+        if(!this.sidebar_shown){
+          return menu_icon1.toSvg({
+            "stroke-width":1
+          })
+        }else{
+          return menu_icon2.toSvg({
+            "stroke-width":1
+          })
+        }
+      },
+      chart_icon(){
+        return chart_icon.toSvg(menu_icons_attrs)
+      },
+      uang_masuk_icon(){
+        return uang_masuk_icon.toSvg(menu_icons_attrs)
+      },
+      uang_keluar_icon(){
+        return uang_keluar_icon.toSvg({...menu_icons_attrs,class:'-rotate-90'})
+      },
+      users_icon(){
+        return users_icon.toSvg(menu_icons_attrs)
+      },
+      report_icon(){
+        return report_icon.toSvg(menu_icons_attrs)
+      }
+    },
+    mounted(){
+      const that = this
+      this.$nextTick(()=>{
+        document.addEventListener("click", that.documentClickHandler);
+        that.$refs.toggle_sidebar_wrapper.addEventListener('click',that.toggleSidebar)
+      })
+    },
+    beforeUnmount() {
+      document.removeEventListener('click', this.documentClickHandler)
+    },
+  }
+</script>
+
+<template>
+  <main>
+    <header>
+      <div class="w-10 cursor-pointer xl:hidden" ref="toggle_sidebar_wrapper" v-html="menu_icon"></div>
+      <div class="page-title">
+        <div class="font-bold flex items-start">
+          <div v-html="title_prop.page_title_icon"></div>
+          <h1>{{title_prop.page_title}}</h1>
+        </div>
+      </div>
+      <div class="w-10">
+        <img :src="img_profile_src" alt="IMAGE PROFILE" ref="img_profile" v-on:click="toggleProfileMenu" class="img-profile">
+        <div class="profile-menu-wrapper" v-show="profile_menu_opened" ref="profile_menu_section">
+          <div v-html="triangle_icon" class="absolute -top-[13px] right-7"></div>
+          <ul>
+            <li><a href="/">Akun</a></li>
+            <li><a href="/">Log</a></li>
+            <li><a href="/" class="danger">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="main-content-wrapper">
+      <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
+        <ul class="side-menu-wrapper">
+          <li><a class="active" href="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</a></li>
+          <li><a href="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</a></li>
+          <li><a href="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</a></li>
+          <li><a href="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</a></li>
+          <li><a href="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</a></li>
+          <li><a href="/report"><i class="mr-2" v-html="report_icon"></i> Report</a></li>
+        </ul>
+      </aside>
+      <div id="main-content">
+        <Nuxt />
+      </div>
+    </div>
+    <footer>
+      <span class="text-xs flex-1 text-slate-400">Designed by <a class="font-semibold text-white hover:underline" href="karuniaaplikasi.com">Karunia Aplikasi</a></span>
+      <strong class="text-slate-400 text-xs">Copyrights &copy; {{year}}</strong>
+    </footer>
+  </main>
+</template>
+
+<style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+  header *{
+    font-family: 'Rajdhani', sans-serif;
+  }
+  main{
+    @apply flex flex-col bg-gray-50 h-screen;
+  }
+  header{
+    @apply w-full bg-slate-800 px-4 py-3 flex items-center text-white z-[1] border-b-4 border-primary-dark;
+  }
+  header .page-title{
+    @apply flex-1 flex items-center text-center justify-center xl:justify-start xl:text-left;
+  }
+  #main-content-wrapper{
+    @apply flex-1 h-full xl:flex xl:items-start;
+  }
+  #main-content{
+    @apply p-4;
+  }
+  .img-profile{
+    @apply rounded-full w-9 h-9 ring-2 ring-primary duration-200 ring-opacity-50 hover:ring-primary-light hover:ring-opacity-70 cursor-pointer;
+  }
+  footer{
+    @apply w-full bg-gray-900 p-4 z-[1] flex items-center;
+  }
+  .profile-menu-wrapper{
+    @apply absolute w-36 top-16 right-1 bg-white rounded-sm overflow-visible text-slate-800 shadow-sm shadow-slate-400;
+  }
+  .profile-menu-wrapper ul{
+    @apply divide-y divide-slate-300 bg-white;
+  }
+  .profile-menu-wrapper ul li{
+    @apply hover:bg-primary hover:bg-opacity-10 duration-100;
+  }
+  .profile-menu-wrapper ul li a{
+    @apply px-4 py-2 inline-block w-full duration-200 font-medium;
+  }
+  .profile-menu-wrapper ul li a:not(.danger){
+    @apply hover:text-primary-dark;
+  }
+  .profile-menu-wrapper ul li a.danger{
+    @apply text-danger hover:bg-danger hover:bg-opacity-20 hover:text-danger;
+  }
+  .profile-menu-wrapper ul li a.active{
+    @apply font-semibold;
+  }
+  aside{
+    width: v-bind(sidebar_width);
+    @apply absolute xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200;
+  }
+  aside.show{
+    @apply left-0;
+  }
+  .side-menu-wrapper{
+    @apply divide-y divide-zinc-600 text-white;
+  }
+  .side-menu-wrapper li{
+    @apply hover:text-gray-50 text-base;
+  }
+  .side-menu-wrapper li a{
+    font-family: 'Rajdhani', sans-serif;
+    @apply inline-flex duration-100 p-3 hover:bg-primary-light hover:text-primary hover:bg-opacity-10 text-opacity-90 w-full items-center;
+  }
+  .side-menu-wrapper li a.active{
+    @apply text-primary-dark font-semibold;
+  }
+  .side-menu-wrapper li a.active svg{
+    @apply text-primary;
+  }
+</style>
