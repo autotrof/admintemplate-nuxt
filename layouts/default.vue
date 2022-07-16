@@ -31,13 +31,13 @@
           this.profile_menu_opened=!this.profile_menu_opened
         }
         else if(this.$refs.profile_menu_section && event.target!=this.$refs.img_profile){
-          if (!this.$refs.profile_menu_section.contains(event.target)) this.profile_menu_opened = false
+          if (!this.$refs.profile_menu_section.contains(event.target) && this.profile_menu_opened) this.profile_menu_opened = false
         }
 
         // SIDEBAR TOGGLER
         if(event.target.tagName=='svg' && event.target.classList.contains('toggler-sidebar')){
           this.sidebar_shown=!this.sidebar_shown
-        }else{
+        }else if(this.sidebar_shown){
           this.sidebar_shown = false
         }
       },

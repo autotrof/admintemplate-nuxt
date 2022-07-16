@@ -1,5 +1,5 @@
 export const state = () => ({
-  page_title: "APLIKASI YAYASAN",
+  page_title: process.env.APP_NAME,
   page_title_icon: null
 })
 

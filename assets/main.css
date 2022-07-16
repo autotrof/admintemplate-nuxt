@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.box-info{
+  @apply rounded shadow p-3;
+}
