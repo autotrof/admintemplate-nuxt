@@ -1,5 +1,5 @@
 export const state = () => ({
-  page_title: "",
+  page_title: "APLIKASI YAYASAN",
   page_title_icon: null
 })
 
@@ -19,11 +19,9 @@ export const mutations = {
 export const actions = {
   async fetchData(){
     return null
+  },
+  async logout(){
+    console.log("LOGOUT GUYS")
+    return true
   }
-  /* async fetchCounter(state) {
-    // make request
-    const res = { data: 10 };
-    state.counter = res.data;
-    return res.data;
-  } */
 }

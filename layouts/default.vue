@@ -13,7 +13,7 @@
   const menu_icons_attrs = {
     width:14,
     height:14,
-    'stroke-width':3
+    'stroke-width':2
   }
 
   export default {
@@ -21,22 +21,28 @@
       return {
         img_profile_src,
         profile_menu_opened:false,
-        sidebar_shown:false,
-        documentClickHandler:event=>{
-          if(event.target==this.$refs.img_profile) return;
-          if(this.$refs.profile_menu_section){
-            const isClickInside = this.$refs.profile_menu_section.contains(event.target);
-            if (!isClickInside) this.profile_menu_opened = false
-          }
-        }
+        sidebar_shown:false
       }
     },
     methods:{
-      toggleProfileMenu(){
-        this.profile_menu_opened = !this.profile_menu_opened
+      documentClickHandler(event){
+        // PROFILE MENU TOGGLER
+        if(event.target==this.$refs.img_profile){
+          this.profile_menu_opened=!this.profile_menu_opened
+        }
+        else if(this.$refs.profile_menu_section && event.target!=this.$refs.img_profile){
+          if (!this.$refs.profile_menu_section.contains(event.target)) this.profile_menu_opened = false
+        }
+
+        // SIDEBAR TOGGLER
+        if(event.target.tagName=='svg' && event.target.classList.contains('toggler-sidebar')){
+          this.sidebar_shown=!this.sidebar_shown
+        }else{
+          this.sidebar_shown = false
+        }
       },
-      toggleSidebar(){
-        this.sidebar_shown = !this.sidebar_shown
+      logout(){
+        this.$store.dispatch('logout')
       }
     },
     computed:{
@@ -64,11 +70,13 @@
       menu_icon(){
         if(!this.sidebar_shown){
           return menu_icon1.toSvg({
-            "stroke-width":1
+            "stroke-width":1,
+            'class':'cursor-pointer toggler-sidebar'
           })
         }else{
           return menu_icon2.toSvg({
-            "stroke-width":1
+            "stroke-width":1,
+            'class':'cursor-pointer toggler-sidebar'
           })
         }
       },
@@ -92,7 +100,6 @@
       const that = this
       this.$nextTick(()=>{
         document.addEventListener("click", that.documentClickHandler);
-        that.$refs.toggle_sidebar_wrapper.addEventListener('click',that.toggleSidebar)
       })
     },
     beforeUnmount() {
@@ -104,7 +111,7 @@
 <template>
   <main>
     <header>
-      <div class="w-10 cursor-pointer xl:hidden" ref="toggle_sidebar_wrapper" v-html="menu_icon"></div>
+      <div class="w-10 xl:hidden" v-html="menu_icon"></div>
       <div class="page-title">
         <div class="font-bold flex items-start">
           <div v-html="title_prop.page_title_icon"></div>
@@ -112,13 +119,13 @@
         </div>
       </div>
       <div class="w-10">
-        <img :src="img_profile_src" alt="IMAGE PROFILE" ref="img_profile" v-on:click="toggleProfileMenu" class="img-profile">
+        <img :src="img_profile_src" alt="IMAGE PROFILE" ref="img_profile" class="img-profile">
         <div class="profile-menu-wrapper" v-show="profile_menu_opened" ref="profile_menu_section">
           <div v-html="triangle_icon" class="absolute -top-[13px] right-7"></div>
           <ul>
-            <li><NuxtLink to="/profil">Akun</NuxtLink></li>
-            <li><NuxtLink to="/log">Log</NuxtLink></li>
-            <li><NuxtLink to="/logout" class="danger">Logout</NuxtLink></li>
+            <li><NuxtLink active-class="active" exact to="/profil">Akun</NuxtLink></li>
+            <li><NuxtLink active-class="active" exact to="/log">Log</NuxtLink></li>
+            <li><a href="#" class="danger" v-on:click="logout">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -126,12 +133,12 @@
     <div id="main-content-wrapper">
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
-          <li><NuxtLink to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
-          <li><NuxtLink to="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</NuxtLink></li>
-          <li><NuxtLink to="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</NuxtLink></li>
-          <li><NuxtLink to="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</NuxtLink></li>
-          <li><NuxtLink to="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</NuxtLink></li>
-          <li><NuxtLink to="/report"><i class="mr-2" v-html="report_icon"></i> Report</NuxtLink></li>
+          <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/report"><i class="mr-2" v-html="report_icon"></i> Report</NuxtLink></li>
         </ul>
       </aside>
       <div id="main-content">
@@ -145,22 +152,23 @@
   </main>
 </template>
 
-<style scoped>
+<style scoped lang="css">
   @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-  header *{
+  header *, aside *{
     font-family: 'Rajdhani', sans-serif;
   }
   main{
-    @apply flex flex-col bg-gray-50 h-screen;
+    @apply flex flex-col bg-gray-50 overflow-hidden;
+    height:calc(100vh + 64px);
   }
   header{
-    @apply w-full bg-slate-800 px-4 py-3 flex items-center text-white z-[1] border-b-4 border-primary-dark;
+    @apply w-full bg-slate-800 px-4 py-3 flex items-center text-white z-[1] border-b-4 border-primary-dark relative;
   }
   header .page-title{
     @apply flex-1 flex items-center text-center justify-center xl:justify-start xl:text-left;
   }
   #main-content-wrapper{
-    @apply flex-1 h-full xl:flex xl:items-start;
+    @apply flex-1 xl:flex xl:items-start;
   }
   #main-content{
     @apply p-4;
@@ -190,7 +198,7 @@
     @apply text-danger hover:bg-danger hover:bg-opacity-20 hover:text-danger;
   }
   .profile-menu-wrapper ul li a.active{
-    @apply font-semibold;
+    @apply font-semibold underline;
   }
   aside{
     width: v-bind(sidebar_width);

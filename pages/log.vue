@@ -14,7 +14,7 @@ export default {
         height:20
       })
     }
-    this.$store.commit('changePageTitle',page_title_data)
+    // this.$store.commit('changePageTitle',page_title_data)
   }
 }
 </script>
