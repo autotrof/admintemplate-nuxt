@@ -70,17 +70,23 @@
           })
         }
       },
-      chart_icon(){
+      sidebar_dashboard_icon(){
         return this.$feather['bar-chart-2'].toSvg(this.menu_icons_attrs)
       },
-      users_icon(){
+      sidebar_chart_icon(){
+        return this.$feather['pie-chart'].toSvg(this.menu_icons_attrs)
+      },
+      sidebar_users_icon(){
         return this.$feather['users'].toSvg(this.menu_icons_attrs)
       },
-      table_icon(){
+      sidebar_table_icon(){
         return this.$feather.table.toSvg(this.menu_icons_attrs)
       },
-      grid_icon(){
+      sidebar_widget_icon(){
         return this.$feather.grid.toSvg(this.menu_icons_attrs)
+      },
+      sidebar_modal_icon(){
+        return this.$feather.copy.toSvg(this.menu_icons_attrs)
       }
     },
     mounted(){
@@ -120,11 +126,11 @@
     <div id="main-content-wrapper">
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
-          <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="table_icon"></i> Table</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="grid_icon"></i> Widget</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="chart_icon"></i> Modal & Alert</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="chart_icon"></i> Chart</NuxtLink></li>
+          <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="sidebar_dashbaord_icon"></i> Dashboard</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="sidebar_table_icon"></i> Table</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="sidebar_widget_icon"></i> Widget</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="sidebar_modal_icon"></i> Modal & Alert</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="sidebar_chart_icon"></i> Chart</NuxtLink></li>
         </ul>
       </aside>
       <div id="main-content">
