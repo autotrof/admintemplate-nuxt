@@ -1,12 +1,6 @@
 
 <script>
   const img_profile_src = require('../static/user.jpg')
-  const feather = require('feather-icons')
-  const menu_icons_attrs = {
-    width:14,
-    height:14,
-    'stroke-width':2
-  }
 
   export default {
     data(){
@@ -38,6 +32,13 @@
       }
     },
     computed:{
+      menu_icons_attrs(){
+        return {
+          width:14,
+          height:14,
+          'stroke-width':2
+        }
+      },
       title_prop(){
         return {
           page_title:this.$store.state.page_title,
@@ -47,11 +48,8 @@
       year(){ 
         return (new Date()).getFullYear()
       },
-      sidebar_width(){
-        return '200px'
-      },
       triangle_icon(){
-        return feather.icons.triangle.toSvg({
+        return this.$feather.triangle.toSvg({
           class:"text-white",
           width:16,
           height:16,
@@ -61,23 +59,29 @@
       },
       menu_icon(){
         if(!this.sidebar_shown){
-          return feather.icons['align-left'].toSvg({
+          return this.$feather['align-left'].toSvg({
             "stroke-width":1,
             'class':'cursor-pointer toggler-sidebar'
           })
         }else{
-          return feather.icons['align-justify'].toSvg({
+          return this.$feather['align-justify'].toSvg({
             "stroke-width":1,
             'class':'cursor-pointer toggler-sidebar'
           })
         }
       },
       chart_icon(){
-        return feather.icons['bar-chart-2'].toSvg(menu_icons_attrs)
+        return this.$feather['bar-chart-2'].toSvg(this.menu_icons_attrs)
       },
       users_icon(){
-        return feather.icons['users'].toSvg(menu_icons_attrs)
+        return this.$feather['users'].toSvg(this.menu_icons_attrs)
       },
+      table_icon(){
+        return this.$feather.table.toSvg(this.menu_icons_attrs)
+      },
+      grid_icon(){
+        return this.$feather.grid.toSvg(this.menu_icons_attrs)
+      }
     },
     mounted(){
       const that = this
@@ -117,8 +121,8 @@
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
           <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="chart_icon"></i> Table</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="chart_icon"></i> Widget</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="table_icon"></i> Table</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="grid_icon"></i> Widget</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="chart_icon"></i> Modal & Alert</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="chart_icon"></i> Chart</NuxtLink></li>
         </ul>
@@ -183,8 +187,7 @@
     @apply font-semibold underline;
   }
   aside{
-    width: v-bind(sidebar_width);
-    @apply absolute xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200;
+    @apply absolute xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200 w-[200px];
   }
   aside.show{
     @apply left-0;
