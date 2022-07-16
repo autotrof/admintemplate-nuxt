@@ -126,7 +126,7 @@
     <div id="main-content-wrapper">
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
-          <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="sidebar_dashbaord_icon"></i> Dashboard</NuxtLink></li>
+          <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="sidebar_dashboard_icon"></i> Dashboard</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="sidebar_table_icon"></i> Table</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="sidebar_widget_icon"></i> Widget</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="sidebar_modal_icon"></i> Modal & Alert</NuxtLink></li>
