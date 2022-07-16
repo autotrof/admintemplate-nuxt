@@ -2,14 +2,6 @@
 <script>
   const img_profile_src = require('../static/user.jpg')
   const feather = require('feather-icons')
-  const menu_icon1 = feather.icons['align-left']
-  const menu_icon2 = feather.icons['align-justify']
-  const chart_icon = feather.icons['bar-chart-2']
-  const uang_masuk_icon = feather.icons.download
-  const uang_keluar_icon = feather.icons['log-out']
-  const users_icon = feather.icons['users']
-  const report_icon = feather.icons['file-text']
-  const triangle_icon = feather.icons.triangle
   const menu_icons_attrs = {
     width:14,
     height:14,
@@ -59,7 +51,7 @@
         return '200px'
       },
       triangle_icon(){
-        return triangle_icon.toSvg({
+        return feather.icons.triangle.toSvg({
           class:"text-white",
           width:16,
           height:16,
@@ -69,32 +61,23 @@
       },
       menu_icon(){
         if(!this.sidebar_shown){
-          return menu_icon1.toSvg({
+          return feather.icons['align-left'].toSvg({
             "stroke-width":1,
             'class':'cursor-pointer toggler-sidebar'
           })
         }else{
-          return menu_icon2.toSvg({
+          return feather.icons['align-justify'].toSvg({
             "stroke-width":1,
             'class':'cursor-pointer toggler-sidebar'
           })
         }
       },
       chart_icon(){
-        return chart_icon.toSvg(menu_icons_attrs)
-      },
-      uang_masuk_icon(){
-        return uang_masuk_icon.toSvg(menu_icons_attrs)
-      },
-      uang_keluar_icon(){
-        return uang_keluar_icon.toSvg({...menu_icons_attrs,class:'-rotate-90'})
+        return feather.icons['bar-chart-2'].toSvg(menu_icons_attrs)
       },
       users_icon(){
-        return users_icon.toSvg(menu_icons_attrs)
+        return feather.icons['users'].toSvg(menu_icons_attrs)
       },
-      report_icon(){
-        return report_icon.toSvg(menu_icons_attrs)
-      }
     },
     mounted(){
       const that = this
@@ -134,11 +117,10 @@
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
           <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="chart_icon"></i> Dashboard</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="uang_masuk_icon"></i> Uang Masuk</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="uang_keluar_icon"></i> Uang Keluar</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="users_icon"></i> Data Donatur</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="users_icon"></i> Data Penerima</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/report"><i class="mr-2" v-html="report_icon"></i> Report</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="chart_icon"></i> Table</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="chart_icon"></i> Widget</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="chart_icon"></i> Modal & Alert</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="chart_icon"></i> Chart</NuxtLink></li>
         </ul>
       </aside>
       <div id="main-content">
@@ -152,7 +134,7 @@
   </main>
 </template>
 
-<style scoped lang="css">
+<style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
   header *, aside *{
     font-family: 'Rajdhani', sans-serif;
