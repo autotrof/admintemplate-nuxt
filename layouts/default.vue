@@ -127,10 +127,10 @@
       <aside ref="sidebar_menu" :class="{'show':sidebar_shown}">
         <ul class="side-menu-wrapper">
           <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="sidebar_dashboard_icon"></i> Dashboard</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_masuk"><i class="mr-2" v-html="sidebar_table_icon"></i> Table</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/uang_keluar"><i class="mr-2" v-html="sidebar_widget_icon"></i> Widget</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/donatur"><i class="mr-2" v-html="sidebar_modal_icon"></i> Modal & Alert</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/penerima"><i class="mr-2" v-html="sidebar_chart_icon"></i> Chart</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/table"><i class="mr-2" v-html="sidebar_table_icon"></i> Table</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/widget"><i class="mr-2" v-html="sidebar_widget_icon"></i> Widget</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/modal"><i class="mr-2" v-html="sidebar_modal_icon"></i> Modal & Alert</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/chart"><i class="mr-2" v-html="sidebar_chart_icon"></i> Chart</NuxtLink></li>
         </ul>
       </aside>
       <div id="main-content">
@@ -163,7 +163,7 @@
     @apply flex-1 xl:flex xl:items-start;
   }
   #main-content{
-    @apply p-4;
+    @apply p-4 w-full;
   }
   .img-profile{
     @apply rounded-full w-9 h-9 ring-2 ring-primary duration-200 ring-opacity-50 hover:ring-primary-light hover:ring-opacity-70 cursor-pointer;

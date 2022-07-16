@@ -5,3 +5,32 @@
 .box-info{
   @apply rounded shadow p-3;
 }
+
+h1{
+  @apply text-3xl;
+}
+h2{
+  @apply text-2xl;
+}
+h3{
+  @apply text-xl;
+}
+h4{
+  @apply text-lg;
+}
+h5{
+  @apply text-base;
+}
+h6{
+  @apply text-sm;
+}
+
+.info-box{
+  @apply rounded shadow flex items-center p-2 bg-white overflow-hidden;
+}
+.info-box .icon-wrapper{
+  @apply rounded p-4;
+}
+.info-box .info{
+  @apply flex-1 ml-2;
+}
