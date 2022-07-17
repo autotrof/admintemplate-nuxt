@@ -41,6 +41,13 @@ h6{
 .info-box2 .icon-wrapper{
   @apply p-4;
 }
-.info-box2 .info{
-  @apply text-white;
+
+.info-box3{
+  @apply rounded shadow flex items-start p-4 overflow-hidden;
+}
+.info-box3 .icon-wrapper{
+  @apply ml-2;
+}
+.info-box3 .info{
+  @apply flex-1;
 }
