@@ -159,6 +159,9 @@
   header .page-title{
     @apply flex-1 flex items-center text-center justify-center xl:justify-start xl:text-left;
   }
+  header .page-title h1{
+    @apply text-lg;
+  }
   #main-content-wrapper{
     @apply flex-1 xl:flex xl:items-start;
   }

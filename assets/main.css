@@ -25,12 +25,22 @@ h6{
   @apply text-sm;
 }
 
-.info-box{
+.info-box1{
   @apply rounded shadow flex items-center p-2 bg-white overflow-hidden;
 }
-.info-box .icon-wrapper{
+.info-box1 .icon-wrapper{
   @apply rounded p-4;
 }
-.info-box .info{
+.info-box2 .info,.info-box1 .info{
   @apply flex-1 ml-2;
+}
+
+.info-box2{
+  @apply rounded shadow flex items-center p-3 pr-7 overflow-hidden;
+}
+.info-box2 .icon-wrapper{
+  @apply p-4;
+}
+.info-box2 .info{
+  @apply text-white;
 }
