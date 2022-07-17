@@ -146,7 +146,7 @@
 
 <style scoped>
   main{
-    @apply flex flex-col bg-gray-50 overflow-hidden;
+    @apply flex flex-col bg-gray-50;
     height:calc(100vh + 64px);
   }
   header{
@@ -192,7 +192,7 @@
     @apply font-semibold underline;
   }
   aside{
-    @apply absolute xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200 w-[200px];
+    @apply absolute z-50 xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200 w-[200px];
   }
   aside.show{
     @apply left-0;

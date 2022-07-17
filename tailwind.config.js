@@ -27,6 +27,9 @@ module.exports = {
           light:colors.red[400],
           dark:colors.red[600]
         }
+      },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
       }
     },
   },

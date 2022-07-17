@@ -31,8 +31,12 @@ h6{
   @apply text-sm;
 }
 
+[class^='info-box']{
+  @apply relative;
+}
+
 .info-box1{
-  @apply rounded shadow flex items-center p-2 bg-white overflow-hidden;
+  @apply rounded shadow-md flex items-center p-2 bg-white overflow-hidden;
 }
 .info-box1 .icon-wrapper{
   @apply rounded p-4;
@@ -42,14 +46,14 @@ h6{
 }
 
 .info-box2{
-  @apply rounded shadow flex items-center p-3 pr-7 overflow-hidden;
+  @apply rounded shadow-md flex items-center p-3 pr-7 overflow-hidden;
 }
 .info-box2 .icon-wrapper{
   @apply p-4;
 }
 
 .info-box3{
-  @apply rounded shadow overflow-hidden;
+  @apply rounded shadow-md overflow-hidden;
 }
 .info-box3 .wrapper{
   @apply flex items-start p-4;
