@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header *, aside *{
+  font-family: 'Rajdhani', sans-serif;
+}
 
 .box-info{
   @apply rounded shadow p-3;
@@ -43,11 +49,23 @@ h6{
 }
 
 .info-box3{
-  @apply rounded shadow flex items-start p-4 overflow-hidden;
+  @apply rounded shadow overflow-hidden;
 }
-.info-box3 .icon-wrapper{
+.info-box3 .wrapper{
+  @apply flex items-start p-4;
+}
+.info-box3 .wrapper .icon-wrapper{
   @apply ml-2;
 }
-.info-box3 .info{
+.info-box3 .wrapper .info{
   @apply flex-1;
+}
+.info-box3 .link{
+  @apply w-full py-2 text-center text-sm p-3 inline-block bg-gray-900 bg-opacity-10 hover:bg-opacity-30 duration-150 font-bold;
+}
+.info-box3 .wrapper svg{
+  @apply opacity-30;
+}
+.info-box3:hover .wrapper svg{
+  @apply opacity-40;
 }

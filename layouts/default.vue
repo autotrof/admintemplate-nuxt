@@ -145,10 +145,6 @@
 </template>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-  header *, aside *{
-    font-family: 'Rajdhani', sans-serif;
-  }
   main{
     @apply flex flex-col bg-gray-50 overflow-hidden;
     height:calc(100vh + 64px);
