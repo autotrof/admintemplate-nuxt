@@ -30,6 +30,9 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
+      },
+      fontFamily:{
+        rajdhani:['Rajdhani', 'sans-serif']
       }
     },
   },

@@ -162,7 +162,7 @@
     @apply flex-1 xl:flex xl:items-start;
   }
   #main-content{
-    @apply p-4 w-full;
+    @apply w-full;
   }
   .img-profile{
     @apply rounded-full w-9 h-9 ring-2 ring-primary duration-200 ring-opacity-50 hover:ring-primary-light hover:ring-opacity-70 cursor-pointer;
@@ -192,7 +192,7 @@
     @apply font-semibold underline;
   }
   aside{
-    @apply absolute z-50 xl:relative bg-slate-700 h-full -left-[200px] xl:left-0 duration-200 w-[200px];
+    @apply absolute z-50 xl:relative bg-slate-700 h-full -left-[250px] xl:left-0 duration-200 w-[250px];
   }
   aside.show{
     @apply left-0;

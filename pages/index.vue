@@ -1,33 +1,23 @@
 <template>
-  <div class="grid grid-rows-4 grid-flow-col gap-4 md:grid-rows-2">
-    <div class="box-info bg-gradient-to-r from-violet-500 to-fuchsia-500">
-      Total Donasi Masuk
-    </div>
-    <div class="box-info bg-gradient-to-r from-violet-500 to-fuchsia-500">
-      Total Donasi Disalurkan
-    </div>
-    <div class="box-info bg-gradient-to-r from-violet-500 to-fuchsia-500">
-      Total Donasi Untuk Operasional
-    </div>
-    <div class="box-info bg-gradient-to-r from-violet-500 to-fuchsia-500">
-      Total Pengeluaran
-    </div>
+  <div>
+    <BigAnnouncement>
+      <div>
+        <h1 class="font-bold font-mono mb-2">{{$store.state.page_title}}</h1>
+        <h1 class="font-bold font-mono my-4 text-4xl xl:text-5xl">Selamat Datang Admin</h1>
+        <div class="font-rajdhani text-2xl">
+          <p class="text-gray-100">Our courses will step you through the process of a building small applications, or adding new features to existing applications. </p>
+        </div>
+      </div>
+    </BigAnnouncement>
   </div>
 </template>
 
 <script>
-const feather = require('feather-icons')
-export default {
-  created(){
-    const page_title_data = {
-      title:'DASHBOARD',
-      icon:feather.icons['bar-chart-2'].toSvg({
-        class:"mr-1 text-primary",
-        width:20,
-        height:20
-      })
+  export default {
+    data(){
+      return {
+        
+      }
     }
-    // this.$store.commit('changePageTitle',page_title_data)
   }
-}
 </script>

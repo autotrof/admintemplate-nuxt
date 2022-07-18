@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="p-4">
     <div class="w-ful mb-2">
       <h2>Widget</h2>
     </div>
