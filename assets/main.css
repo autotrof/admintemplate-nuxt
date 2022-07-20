@@ -41,6 +41,31 @@ h6{
 .info-box1 .icon-wrapper{
   @apply rounded p-4;
 }
+.info-box1.primary .icon-wrapper svg,.info-box1.secondary .icon-wrapper svg,.info-box1.danger .icon-wrapper svg,.info-box1.success .icon-wrapper svg{
+  @apply text-white;
+}
+.info-box1.warning .icon-wrapper svg,.info-box1.info .icon-wrapper svg{
+  @apply text-gray-700;
+}
+.info-box1.primary .icon-wrapper{
+  @apply bg-primary;
+}
+.info-box1.secondary .icon-wrapper{
+  @apply bg-secondary;
+}
+.info-box1.danger .icon-wrapper{
+  @apply bg-danger;
+}
+.info-box1.warning .icon-wrapper{
+  @apply bg-warning;
+}
+.info-box1.success .icon-wrapper{
+  @apply bg-success;
+}
+.info-box1.info .icon-wrapper{
+  @apply bg-info;
+}
+
 .info-box2 .info,.info-box1 .info{
   @apply flex-1 ml-2;
 }
@@ -51,6 +76,58 @@ h6{
 .info-box2 .icon-wrapper{
   @apply p-4;
 }
+.info-box2.primary .info,.info-box2.primary .icon-wrapper svg,
+.info-box2.danger .info,.info-box2.danger .icon-wrapper svg,
+.info-box2.secondary .info,.info-box2.secondary .icon-wrapper svg,
+.info-box2.success .info,.info-box2.success .icon-wrapper svg
+{
+  @apply text-white;
+}
+.info-box2.warning .info,.info-box2.warning .icon-wrapper svg,
+.info-box2.info .info,.info-box2.info .icon-wrapper svg{
+  @apply text-gray-700;
+}
+.info-box2.primary{
+  @apply bg-primary;
+}
+.info-box2.secondary{
+  @apply bg-secondary;
+}
+.info-box2.danger{
+  @apply bg-danger;
+}
+.info-box2.warning{
+  @apply bg-warning;
+}
+.info-box2.info{
+  @apply bg-info;
+}
+.info-box2.success{
+  @apply bg-success;
+}
+.info-box2.gradient{
+  @apply bg-gradient-to-bl
+}
+.info-box2.gradient.primary{
+  @apply from-primary-light to-primary-dark;
+}
+.info-box2.gradient.secondary{
+  @apply from-secondary-light to-secondary-dark;
+}
+.info-box2.gradient.danger{
+  @apply from-danger-light to-danger-dark;
+}
+.info-box2.gradient.warning{
+  @apply from-warning-light to-warning-dark;
+}
+.info-box2.gradient.info{
+  @apply from-info-light to-info-dark;
+}
+.info-box2.gradient.success{
+  @apply from-success-light to-success-dark;
+}
+
+
 
 .info-box3{
   @apply rounded shadow-md overflow-hidden;
@@ -72,4 +149,131 @@ h6{
 }
 .info-box3:hover .wrapper svg{
   @apply opacity-40;
+}
+.info-box3 .info,.info-box3 a.link{
+  @apply text-white;
+}
+.info-box3.warning .info,.info-box3.warning a.link,
+.info-box3.info .info,.info-box3.info a.link{
+  @apply text-gray-700;
+}
+.info-box3.primary{
+  @apply bg-primary;
+}
+.info-box3.secondary{
+  @apply bg-secondary;
+}
+.info-box3.danger{
+  @apply bg-danger;
+}
+.info-box3.warning{
+  @apply bg-warning;
+}
+.info-box3.success{
+  @apply bg-success;
+}
+.info-box3.info{
+  @apply bg-info;
+}
+
+.alert{
+  @apply w-full rounded-md py-3 px-6 overflow-hidden;
+}
+.alert.outline{
+  @apply border-[1px] outline-none box-border;
+}
+.alert.primary{
+  @apply bg-primary;
+}
+.alert.primary.soft,.alert.primary.outline{
+  @apply bg-primary-extra-light;
+}
+.alert.primary.outline{
+  @apply border-primary;
+}
+.alert.primary .title{
+  @apply text-primary-extra-dark;
+}
+.alert.primary .description{
+  @apply text-primary-dark;
+}
+
+.alert.secondary{
+  @apply bg-secondary;
+}
+.alert.secondary.soft,.alert.secondary.outline{
+  @apply bg-secondary-extra-light;
+}
+.alert.secondary.outline{
+  @apply border-secondary;
+}
+.alert.secondary .title{
+  @apply text-secondary-extra-dark;
+}
+.alert.secondary .description{
+  @apply text-secondary-dark;
+}
+
+.alert.warning{
+  @apply bg-warning;
+}
+.alert.warning.soft,.alert.warning.outline{
+  @apply bg-warning-extra-light;
+}
+.alert.warning.outline{
+  @apply border-warning;
+}
+.alert.warning .title{
+  @apply text-warning-extra-dark;
+}
+.alert.warning .description{
+  @apply text-warning-dark;
+}
+
+.alert.danger{
+  @apply bg-danger;
+}
+.alert.danger.soft,.alert.danger.outline{
+  @apply bg-danger-extra-light;
+}
+.alert.danger.outline{
+  @apply border-danger;
+}
+.alert.danger .title{
+  @apply text-danger-extra-dark;
+}
+.alert.danger .description{
+  @apply text-danger-dark;
+}
+
+.alert.success{
+  @apply bg-success;
+}
+.alert.success.soft,.alert.success.outline{
+  @apply bg-success-extra-light;
+}
+.alert.success.outline{
+  @apply border-success;
+}
+.alert.success .title{
+  @apply text-success-extra-dark;
+}
+.alert.success .description{
+  @apply text-success-dark;
+}
+
+.alert.info{
+  @apply bg-info;
+}
+.alert.info.soft,.alert.info.outline{
+  @apply bg-info-extra-light;
+}
+.alert.info.outline{
+  @apply border-info;
+}
+.alert.info .title{
+  @apply text-info-extra-dark;
+}
+.alert.info .description{
+  @apply text-info-dark;
 }

@@ -45,7 +45,7 @@
           page_title_icon:this.$store.state.page_title_icon
         }
       },
-      year(){ 
+      year(){
         return (new Date()).getFullYear()
       },
       triangle_icon(){
@@ -82,7 +82,7 @@
       sidebar_table_icon(){
         return this.$feather.table.toSvg(this.menu_icons_attrs)
       },
-      sidebar_widget_icon(){
+      sidebar_component_icon(){
         return this.$feather.grid.toSvg(this.menu_icons_attrs)
       },
       sidebar_modal_icon(){
@@ -128,7 +128,7 @@
         <ul class="side-menu-wrapper">
           <li><NuxtLink active-class="active" exact to="/"><i class="mr-2" v-html="sidebar_dashboard_icon"></i> Dashboard</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/table"><i class="mr-2" v-html="sidebar_table_icon"></i> Table</NuxtLink></li>
-          <li><NuxtLink active-class="active" to="/widget"><i class="mr-2" v-html="sidebar_widget_icon"></i> Widget</NuxtLink></li>
+          <li><NuxtLink active-class="active" to="/component"><i class="mr-2" v-html="sidebar_component_icon"></i> Component</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/modal"><i class="mr-2" v-html="sidebar_modal_icon"></i> Modal & Alert</NuxtLink></li>
           <li><NuxtLink active-class="active" to="/chart"><i class="mr-2" v-html="sidebar_chart_icon"></i> Chart</NuxtLink></li>
         </ul>
@@ -146,7 +146,7 @@
 
 <style scoped>
   main{
-    @apply flex flex-col bg-gray-50;
+    @apply flex flex-col bg-gray-50 text-gray-800;
     height:calc(100vh + 64px);
   }
   header{
