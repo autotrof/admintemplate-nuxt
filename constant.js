@@ -11,9 +11,9 @@ module.exports = {
       'extra-light':colors.slate[100]
     },
     warning:{
-      DEFAULT:colors.yellow[500],
-      light:colors.yellow[400],
-      dark:colors.yellow[600],
+      DEFAULT:colors.yellow[400],
+      light:colors.yellow[300],
+      dark:colors.yellow[500],
       'extra-dark':colors.yellow[800],
       'extra-light':colors.yellow[100]
     },

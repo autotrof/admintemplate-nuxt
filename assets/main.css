@@ -179,6 +179,9 @@ h6{
 .alert{
   @apply w-full rounded-md py-3 px-6 overflow-hidden;
 }
+.alert .title,.alert .description{
+  @apply text-white;
+}
 .alert.outline{
   @apply border-[1px] outline-none box-border;
 }
@@ -191,10 +194,10 @@ h6{
 .alert.primary.outline{
   @apply border-primary;
 }
-.alert.primary .title{
+.alert.primary.soft .title,.alert.primary.outline .title{
   @apply text-primary-extra-dark;
 }
-.alert.primary .description{
+.alert.primary.soft .description,.alert.primary.outline .description{
   @apply text-primary-dark;
 }
 
@@ -207,15 +210,18 @@ h6{
 .alert.secondary.outline{
   @apply border-secondary;
 }
-.alert.secondary .title{
+.alert.secondary.soft .title,.alert.secondary.outline .title{
   @apply text-secondary-extra-dark;
 }
-.alert.secondary .description{
+.alert.secondary.soft .description,.alert.secondary.outline .description{
   @apply text-secondary-dark;
 }
 
 .alert.warning{
   @apply bg-warning;
+}
+.alert.warning .title,.alert.warning .description{
+  @apply text-gray-700;
 }
 .alert.warning.soft,.alert.warning.outline{
   @apply bg-warning-extra-light;
@@ -223,10 +229,10 @@ h6{
 .alert.warning.outline{
   @apply border-warning;
 }
-.alert.warning .title{
+.alert.warning.soft .title,.alert.warning.outline .title{
   @apply text-warning-extra-dark;
 }
-.alert.warning .description{
+.alert.warning.soft .description,.alert.warning.outline .description{
   @apply text-warning-dark;
 }
 
@@ -239,10 +245,10 @@ h6{
 .alert.danger.outline{
   @apply border-danger;
 }
-.alert.danger .title{
+.alert.danger.soft .title,.alert.danger.outline .title{
   @apply text-danger-extra-dark;
 }
-.alert.danger .description{
+.alert.danger.soft .description,.alert.danger.outline .description{
   @apply text-danger-dark;
 }
 
@@ -255,15 +261,18 @@ h6{
 .alert.success.outline{
   @apply border-success;
 }
-.alert.success .title{
+.alert.success.soft .title,.alert.success.outline .title{
   @apply text-success-extra-dark;
 }
-.alert.success .description{
+.alert.success.soft .description,.alert.success.outline .description{
   @apply text-success-dark;
 }
 
 .alert.info{
   @apply bg-info;
+}
+.alert.info .title,.alert.info .description{
+  @apply text-gray-700;
 }
 .alert.info.soft,.alert.info.outline{
   @apply bg-info-extra-light;
@@ -271,9 +280,9 @@ h6{
 .alert.info.outline{
   @apply border-info;
 }
-.alert.info .title{
+.alert.info.soft .title,.alert.info.outline .title{
   @apply text-info-extra-dark;
 }
-.alert.info .description{
+.alert.info.soft .description,.alert.info.outline .description{
   @apply text-info-dark;
 }

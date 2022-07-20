@@ -319,6 +319,31 @@
         <strong class="title">Info alert</strong>
         <p class="description"> Thank you for joining our newsletter </p>
       </div>
+
+      <div class="alert primary mb-2">
+        <strong class="title">Primary alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
+      <div class="alert secondary mb-2">
+        <strong class="title">Secondary alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
+      <div class="alert warning mb-2">
+        <strong class="title">Warning alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
+      <div class="alert danger mb-2">
+        <strong class="title">Danger alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
+      <div class="alert success mb-2">
+        <strong class="title">Success alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
+      <div class="alert info mb-2">
+        <strong class="title">Info alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </div>
     </div>
   </div>
 
