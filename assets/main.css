@@ -182,38 +182,53 @@ h6{
 .alert .title,.alert .description{
   @apply text-white;
 }
-.alert.outline{
+.alert.bordered .description{
+  @apply text-gray-800;
+}
+.alert.outlined{
   @apply border-[1px] outline-none box-border;
 }
 .alert.primary{
   @apply bg-primary;
 }
-.alert.primary.soft,.alert.primary.outline{
+.alert.primary.soft,.alert.primary.outlined{
   @apply bg-primary-extra-light;
 }
-.alert.primary.outline{
+.alert.primary.outlined{
   @apply border-primary;
 }
-.alert.primary.soft .title,.alert.primary.outline .title{
+.alert.primary.bordered{
+  @apply border-primary;
+}
+.alert.primary.bordered .title{
+  @apply text-primary-dark;
+}
+.alert.primary.soft .title,.alert.primary.outlined .title{
   @apply text-primary-extra-dark;
 }
-.alert.primary.soft .description,.alert.primary.outline .description{
+.alert.primary.soft .description,.alert.primary.outlined .description{
   @apply text-primary-dark;
 }
 
 .alert.secondary{
   @apply bg-secondary;
 }
-.alert.secondary.soft,.alert.secondary.outline{
+.alert.secondary.soft,.alert.secondary.outlined{
   @apply bg-secondary-extra-light;
 }
-.alert.secondary.outline{
+.alert.secondary.outlined{
   @apply border-secondary;
 }
-.alert.secondary.soft .title,.alert.secondary.outline .title{
+.alert.secondary.bordered{
+  @apply border-secondary;
+}
+.alert.secondary.bordered .title{
+  @apply text-secondary-dark;
+}
+.alert.secondary.soft .title,.alert.secondary.outlined .title{
   @apply text-secondary-extra-dark;
 }
-.alert.secondary.soft .description,.alert.secondary.outline .description{
+.alert.secondary.soft .description,.alert.secondary.outlined .description{
   @apply text-secondary-dark;
 }
 
@@ -223,48 +238,66 @@ h6{
 .alert.warning .title,.alert.warning .description{
   @apply text-gray-700;
 }
-.alert.warning.soft,.alert.warning.outline{
+.alert.warning.soft,.alert.warning.outlined{
   @apply bg-warning-extra-light;
 }
-.alert.warning.outline{
+.alert.warning.outlined{
   @apply border-warning;
 }
-.alert.warning.soft .title,.alert.warning.outline .title{
+.alert.warning.bordered{
+  @apply border-warning;
+}
+.alert.warning.bordered .title{
+  @apply text-warning-dark;
+}
+.alert.warning.soft .title,.alert.warning.outlined .title{
   @apply text-warning-extra-dark;
 }
-.alert.warning.soft .description,.alert.warning.outline .description{
+.alert.warning.soft .description,.alert.warning.outlined .description{
   @apply text-warning-dark;
 }
 
 .alert.danger{
   @apply bg-danger;
 }
-.alert.danger.soft,.alert.danger.outline{
+.alert.danger.soft,.alert.danger.outlined{
   @apply bg-danger-extra-light;
 }
-.alert.danger.outline{
+.alert.danger.outlined{
   @apply border-danger;
 }
-.alert.danger.soft .title,.alert.danger.outline .title{
+.alert.danger.bordered{
+  @apply border-danger;
+}
+.alert.danger.bordered .title{
+  @apply text-danger-dark;
+}
+.alert.danger.soft .title,.alert.danger.outlined .title{
   @apply text-danger-extra-dark;
 }
-.alert.danger.soft .description,.alert.danger.outline .description{
+.alert.danger.soft .description,.alert.danger.outlined .description{
   @apply text-danger-dark;
 }
 
 .alert.success{
   @apply bg-success;
 }
-.alert.success.soft,.alert.success.outline{
+.alert.success.soft,.alert.success.outlined{
   @apply bg-success-extra-light;
 }
-.alert.success.outline{
+.alert.success.outlined{
   @apply border-success;
 }
-.alert.success.soft .title,.alert.success.outline .title{
+.alert.success.bordered{
+  @apply border-success;
+}
+.alert.success.bordered .title{
+  @apply text-success-dark;
+}
+.alert.success.soft .title,.alert.success.outlined .title{
   @apply text-success-extra-dark;
 }
-.alert.success.soft .description,.alert.success.outline .description{
+.alert.success.soft .description,.alert.success.outlined .description{
   @apply text-success-dark;
 }
 
@@ -274,15 +307,25 @@ h6{
 .alert.info .title,.alert.info .description{
   @apply text-gray-700;
 }
-.alert.info.soft,.alert.info.outline{
+.alert.info.soft,.alert.info.outlined{
   @apply bg-info-extra-light;
 }
-.alert.info.outline{
+.alert.info.outlined{
   @apply border-info;
 }
-.alert.info.soft .title,.alert.info.outline .title{
+.alert.info.bordered{
+  @apply border-info;
+}
+.alert.info.bordered .title{
+  @apply text-info-dark;
+}
+.alert.info.soft .title,.alert.info.outlined .title{
   @apply text-info-extra-dark;
 }
-.alert.info.soft .description,.alert.info.outline .description{
+.alert.info.soft .description,.alert.info.outlined .description{
   @apply text-info-dark;
+}
+
+.alert.bordered{
+  @apply border-l-[4px] bg-white shadow-md;
 }
