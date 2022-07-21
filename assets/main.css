@@ -177,7 +177,7 @@ h6{
 }
 
 .alert{
-  @apply w-full rounded-md py-3 px-6 overflow-hidden;
+  @apply w-full rounded-md py-3 px-5 overflow-hidden flex items-start;
 }
 .alert .title,.alert .description{
   @apply text-white;
@@ -328,4 +328,13 @@ h6{
 
 .alert.bordered{
   @apply border-l-[4px] bg-white shadow-md;
+}
+.alert .alert-content{
+  @apply flex-1;
+}
+.alert .btn-close{
+  @apply text-gray-600 outline-none active:outline-none p-0 m-0;
+}
+.alert .btn-close svg{
+  @apply w-4 h-4;
 }

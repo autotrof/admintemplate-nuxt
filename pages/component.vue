@@ -271,104 +271,198 @@
     <div><h5>ALERT</h5></div>
     <div>
       <div class="alert primary soft mb-2">
-        <strong class="title">Primary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Primary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert secondary soft mb-2">
-        <strong class="title">Secondary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Secondary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert warning soft mb-2">
-        <strong class="title">Warning alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Warning alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert danger soft mb-2">
-        <strong class="title">Danger alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Danger alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert success soft mb-2">
-        <strong class="title">Success alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Success alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert info soft mb-2">
-        <strong class="title">Info alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Info alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
 
       <div class="alert primary outlined mb-2">
-        <strong class="title">Primary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Primary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert secondary outlined mb-2">
-        <strong class="title">Secondary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Secondary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert warning outlined mb-2">
-        <strong class="title">Warning alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Warning alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert danger outlined mb-2">
-        <strong class="title">Danger alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Danger alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert success outlined mb-2">
-        <strong class="title">Success alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Success alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert info outlined mb-2">
-        <strong class="title">Info alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Info alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
 
       <div class="alert primary mb-2">
-        <strong class="title">Primary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Primary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert secondary mb-2">
-        <strong class="title">Secondary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Secondary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert warning mb-2">
-        <strong class="title">Warning alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Warning alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert danger mb-2">
-        <strong class="title">Danger alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Danger alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert success mb-2">
-        <strong class="title">Success alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Success alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert info mb-2">
-        <strong class="title">Info alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Info alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
 
 
       <div class="alert primary bordered mb-2">
-        <strong class="title">Primary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Primary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert secondary bordered mb-2">
-        <strong class="title">Secondary alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Secondary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert warning bordered mb-2">
-        <strong class="title">Warning alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Warning alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert danger bordered mb-2">
-        <strong class="title">Danger alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Danger alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert success bordered mb-2">
-        <strong class="title">Success alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Success alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
       </div>
       <div class="alert info bordered mb-2">
-        <strong class="title">Info alert</strong>
-        <p class="description"> Thank you for joining our newsletter </p>
+        <div class="alert-content">
+          <strong class="title">Info alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+      </div>
+
+
+
+
+      <div class="alert primary soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Primary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
+      </div>
+      <div class="alert secondary soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Secondary alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
+      </div>
+      <div class="alert warning soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Warning alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
+      </div>
+      <div class="alert danger soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Danger alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
+      </div>
+      <div class="alert success soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Success alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
+      </div>
+      <div class="alert info soft mb-2">
+        <div class="alert-content">
+          <strong class="title">Info alert</strong>
+          <p class="description"> Thank you for joining our newsletter </p>
+        </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
     </div>
   </div>
