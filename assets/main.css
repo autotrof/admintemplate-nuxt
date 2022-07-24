@@ -30,7 +30,7 @@ html{
 .info-box1 .icon-wrapper{
   @apply rounded p-4;
 }
-.info-box1.primary .icon-wrapper svg,.info-box1.secondary .icon-wrapper svg,.info-box1.danger .icon-wrapper svg,.info-box1.success .icon-wrapper svg{
+.info-box1.primary .icon-wrapper svg,.info-box1.secondary .icon-wrapper svg,.info-box1.accent .icon-wrapper svg,.info-box1.danger .icon-wrapper svg,.info-box1.success .icon-wrapper svg{
   @apply text-white;
 }
 .info-box1.warning .icon-wrapper svg,.info-box1.info .icon-wrapper svg{
@@ -41,6 +41,9 @@ html{
 }
 .info-box1.secondary .icon-wrapper{
   @apply bg-secondary;
+}
+.info-box1.accent .icon-wrapper{
+  @apply bg-accent;
 }
 .info-box1.danger .icon-wrapper{
   @apply bg-danger;
@@ -65,9 +68,13 @@ html{
 .info-box2 .icon-wrapper{
   @apply p-4;
 }
+.info-box2 .icon-wrapper svg{
+  @apply w-8 h-8;
+}
 .info-box2.primary .info,.info-box2.primary .icon-wrapper svg,
 .info-box2.danger .info,.info-box2.danger .icon-wrapper svg,
 .info-box2.secondary .info,.info-box2.secondary .icon-wrapper svg,
+.info-box2.accent .info,.info-box2.accent .icon-wrapper svg,
 .info-box2.success .info,.info-box2.success .icon-wrapper svg
 {
   @apply text-white;
@@ -81,6 +88,9 @@ html{
 }
 .info-box2.secondary{
   @apply bg-secondary;
+}
+.info-box2.accent{
+  @apply bg-accent;
 }
 .info-box2.danger{
   @apply bg-danger;
@@ -102,6 +112,9 @@ html{
 }
 .info-box2.gradient.secondary{
   @apply from-secondary-light to-secondary-dark;
+}
+.info-box2.gradient.accent{
+  @apply from-accent-light to-accent-dark;
 }
 .info-box2.gradient.danger{
   @apply from-danger-light to-danger-dark;
@@ -127,6 +140,9 @@ html{
 .info-box3 .wrapper .icon-wrapper{
   @apply ml-2;
 }
+.info-box3 .wrapper .icon-wrapper svg{
+  @apply stroke-[1.4] text-black w-16 h-16 fill-[rgba(0,0,0,.6)];
+}
 .info-box3 .wrapper .info{
   @apply flex-1;
 }
@@ -151,6 +167,9 @@ html{
 }
 .info-box3.secondary{
   @apply bg-secondary;
+}
+.info-box3.accent{
+  @apply bg-accent;
 }
 .info-box3.danger{
   @apply bg-danger;
@@ -238,6 +257,37 @@ html{
 }
 .alert.secondary.soft .description,.alert.secondary.outlined .description{
   @apply text-secondary-dark;
+}
+
+
+.alert.accent{
+  @apply bg-accent;
+}
+.alert.accent.soft,.alert.accent.outlined{
+  @apply bg-accent-extra-light;
+}
+.alert.accent.outlined{
+  @apply border-accent;
+}
+.alert.accent.bordered{
+  @apply border-accent;
+}
+.alert.accent.outlined .icon,
+.alert.accent.bordered .icon,
+.alert.accent.soft .icon{
+  @apply bg-accent;
+}
+.alert.accent .icon svg{
+  @apply text-accent;
+}
+.alert.accent.bordered .title{
+  @apply text-accent-dark;
+}
+.alert.accent.soft .title,.alert.accent.outlined .title{
+  @apply text-accent-extra-dark;
+}
+.alert.accent.soft .description,.alert.accent.outlined .description{
+  @apply text-accent-dark;
 }
 
 .alert.warning{
@@ -376,7 +426,13 @@ html{
   @apply text-gray-600 outline-none active:outline-none p-0 m-0;
 }
 .alert .btn-close svg{
-  @apply w-4 h-4 translate-y-1;
+  @apply w-4 h-4 translate-y-1 duration-100;
+}
+.alert .btn-close:hover svg{
+  @apply stroke-[4];
+}
+.alert .btn-close:active svg{
+  @apply stroke-[5];
 }
 .alert .icon{
   @apply rounded-full p-1 mr-2 translate-y-1;

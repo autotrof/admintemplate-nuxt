@@ -39,11 +39,18 @@ module.exports = {
       'extra-light':colors.sky[100]
     },
     primary:{
-      DEFAULT:colors.blue[500],
-      light:colors.blue[400],
-      dark:colors.blue[600],
-      'extra-dark':colors.blue[800],
-      'extra-light':colors.blue[100]
+      DEFAULT:colors.indigo[500],
+      light:colors.indigo[400],
+      dark:colors.indigo[600],
+      'extra-dark':colors.indigo[800],
+      'extra-light':colors.indigo[100]
+    },
+    accent: {
+      DEFAULT: '#5e627c',
+      light: '#a5a8bb',
+      dark: '#50526a',
+      'extra-dark': '#3e3f4c',
+      'extra-light': '#e3e4ea'
     },
     'primary-rose':{
       DEFAULT:colors.rose[500],
