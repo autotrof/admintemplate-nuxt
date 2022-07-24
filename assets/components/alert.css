@@ -1,0 +1,291 @@
+.alert{
+  @apply w-full rounded-md py-3 px-5 overflow-hidden flex items-start;
+}
+.alert .icon{
+  @apply bg-white;
+}
+.alert .title,.alert .description{
+  @apply text-white;
+}
+
+.alert .alert-content{
+  @apply flex-1;
+}
+.alert .btn-close{
+  @apply outline-none active:outline-none p-0 m-0;
+}
+.alert .btn-close:hover svg{
+  @apply stroke-[4];
+}
+.alert .btn-close svg{
+  @apply w-4 h-4 translate-y-1 duration-100 text-gray-50;
+}
+.alert.bordered .btn-close svg,
+.alert.soft .btn-close svg,
+.alert.outlined .btn-close svg
+{
+  @apply text-slate-600;
+}
+.alert .btn-close:active svg{
+  @apply stroke-[5] stroke-white;
+}
+.alert.bordered .btn-close:active svg,
+.alert.soft .btn-close:active svg,
+.alert.outlined .btn-close:active svg
+{
+  @apply stroke-slate-800;
+}
+.alert .icon{
+  @apply rounded-full p-1 mr-2 translate-y-1;
+}
+.alert .icon svg{
+  @apply w-2 h-2 stroke-[5];
+}
+
+.alert.bordered .description{
+  @apply text-gray-800;
+}
+.alert.outlined{
+  @apply border-[1px] outline-none box-border;
+}
+.alert.primary{
+  @apply bg-primary;
+}
+.alert.primary.soft,.alert.primary.outlined{
+  @apply bg-primary-extra-light;
+}
+.alert.primary.outlined{
+  @apply border-primary;
+}
+.alert.primary.bordered{
+  @apply border-primary;
+}
+.alert.primary.outlined .icon,
+.alert.primary.bordered .icon,
+.alert.primary.soft .icon{
+  @apply bg-primary;
+}
+.alert.primary .icon svg{
+  @apply text-primary;
+}
+.alert.primary.bordered .title{
+  @apply text-primary-dark;
+}
+.alert.primary.soft .title,.alert.primary.outlined .title{
+  @apply text-primary-extra-dark;
+}
+.alert.primary.soft .description,.alert.primary.outlined .description{
+  @apply text-primary-dark;
+}
+
+.alert.secondary{
+  @apply bg-secondary;
+}
+.alert.secondary.soft,.alert.secondary.outlined{
+  @apply bg-secondary-extra-light;
+}
+.alert.secondary.outlined{
+  @apply border-secondary;
+}
+.alert.secondary.bordered{
+  @apply border-secondary;
+}
+.alert.secondary.outlined .icon,
+.alert.secondary.bordered .icon,
+.alert.secondary.soft .icon{
+  @apply bg-secondary;
+}
+.alert.secondary .icon svg{
+  @apply text-secondary;
+}
+.alert.secondary.bordered .title{
+  @apply text-secondary-dark;
+}
+.alert.secondary.soft .title,.alert.secondary.outlined .title{
+  @apply text-secondary-extra-dark;
+}
+.alert.secondary.soft .description,.alert.secondary.outlined .description{
+  @apply text-secondary-dark;
+}
+
+
+.alert.accent{
+  @apply bg-accent;
+}
+.alert.accent.soft,.alert.accent.outlined{
+  @apply bg-accent-extra-light;
+}
+.alert.accent.outlined{
+  @apply border-accent;
+}
+.alert.accent.bordered{
+  @apply border-accent;
+}
+.alert.accent.outlined .icon,
+.alert.accent.bordered .icon,
+.alert.accent.soft .icon{
+  @apply bg-accent;
+}
+.alert.accent .icon svg{
+  @apply text-accent;
+}
+.alert.accent.bordered .title{
+  @apply text-accent-dark;
+}
+.alert.accent.soft .title,.alert.accent.outlined .title{
+  @apply text-accent-extra-dark;
+}
+.alert.accent.soft .description,.alert.accent.outlined .description{
+  @apply text-accent-dark;
+}
+
+.alert.warning{
+  @apply bg-warning;
+}
+.alert.warning .icon{
+  @apply bg-gray-700;
+}
+.alert.warning .btn-close:active svg{
+  @apply stroke-gray-900;
+}
+.alert.warning.soft,.alert.warning.outlined{
+  @apply bg-warning-extra-light;
+}
+.alert.warning.outlined{
+  @apply border-warning;
+}
+.alert.warning.bordered{
+  @apply border-warning;
+}
+.alert.warning.outlined .icon,
+.alert.warning.bordered .icon,
+.alert.warning.soft .icon{
+  @apply bg-warning;
+}
+.alert.warning .icon svg{
+  @apply text-warning;
+}
+.alert.warning.bordered .title{
+  @apply text-warning-dark;
+}
+.alert.warning.soft .title,.alert.warning.outlined .title{
+  @apply text-warning-extra-dark;
+}
+.alert.warning.soft .description,.alert.warning.outlined .description{
+  @apply text-warning-dark;
+}
+
+.alert.danger{
+  @apply bg-danger;
+}
+.alert.danger.soft,.alert.danger.outlined{
+  @apply bg-danger-extra-light;
+}
+.alert.danger.outlined{
+  @apply border-danger;
+}
+.alert.danger.bordered{
+  @apply border-danger;
+}
+.alert.danger.outlined .icon,
+.alert.danger.bordered .icon,
+.alert.danger.soft .icon{
+  @apply bg-danger;
+}
+.alert.danger .icon svg{
+  @apply text-danger;
+}
+.alert.danger.bordered .title{
+  @apply text-danger-dark;
+}
+.alert.danger.soft .title,.alert.danger.outlined .title{
+  @apply text-danger-extra-dark;
+}
+.alert.danger.soft .description,.alert.danger.outlined .description{
+  @apply text-danger-dark;
+}
+
+.alert.success{
+  @apply bg-success;
+}
+.alert.success.soft,.alert.success.outlined{
+  @apply bg-success-extra-light;
+}
+.alert.success.outlined{
+  @apply border-success;
+}
+.alert.success.bordered{
+  @apply border-success;
+}
+.alert.success.outlined .icon,
+.alert.success.bordered .icon,
+.alert.success.soft .icon{
+  @apply bg-success;
+}
+.alert.success .icon svg{
+  @apply text-success;
+}
+.alert.success.bordered .title{
+  @apply text-success-dark;
+}
+.alert.success.soft .title,.alert.success.outlined .title{
+  @apply text-success-extra-dark;
+}
+.alert.success.soft .description,.alert.success.outlined .description{
+  @apply text-success-dark;
+}
+
+.alert.info{
+  @apply bg-info;
+}
+.alert.info .icon{
+  @apply bg-gray-700;
+}
+.alert.info .btn-close:active svg{
+  @apply stroke-gray-900;
+}
+.alert.info.soft,.alert.info.outlined{
+  @apply bg-info-extra-light;
+}
+.alert.info.outlined{
+  @apply border-info;
+}
+.alert.info.bordered{
+  @apply border-info;
+}
+.alert.info.outlined .icon,
+.alert.info.bordered .icon,
+.alert.info.soft .icon{
+  @apply bg-info;
+}
+.alert.info .icon svg{
+  @apply text-info;
+}
+.alert.info.bordered .title{
+  @apply text-info-dark;
+}
+.alert.info.soft .title,.alert.info.outlined .title{
+  @apply text-info-extra-dark;
+}
+.alert.info.soft .description,.alert.info.outlined .description{
+  @apply text-info-dark;
+}
+
+.alert.bordered{
+  @apply border-l-[4px] bg-white shadow-md;
+}
+
+.alert.soft .icon svg,
+.alert.outlined .icon svg,
+.alert.bordered .icon svg{
+  @apply text-white;
+}
+
+.alert.warning .title,
+.alert.warning .description,
+.alert.warning .btn-close svg,
+.alert.info .title,
+.alert.info .description,
+.alert.info .btn-close svg{
+  @apply text-gray-700;
+}
