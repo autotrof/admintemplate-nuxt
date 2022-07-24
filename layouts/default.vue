@@ -1,4 +1,3 @@
-
 <script>
   const img_profile_src = require('../static/user.jpg')
 
@@ -145,10 +144,21 @@
 </template>
 
 <style scoped>
-  main{
-    @apply flex flex-col bg-gray-50 text-gray-800;
-    height:calc(100vh + 64px);
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+  #main-content * {
+    @apply font-sourcesanspro;
   }
+
+  header *,
+  aside * {
+    @apply font-rajdhani;
+  }
+  html body main{
+    @apply flex flex-col bg-gray-50 text-gray-800;
+    height: calc(100vh + 64px);
+  }
+
   header{
     @apply w-full bg-slate-800 px-4 py-3 flex items-center text-white z-[1] border-b-4 border-primary-dark relative;
   }

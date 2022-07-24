@@ -1,34 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-header *, aside *{
-  font-family: 'Rajdhani', sans-serif;
-}
 
 .box-info{
   @apply rounded shadow p-3;
 }
 
-h1{
-  @apply text-3xl;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
-h2{
-  @apply text-2xl;
-}
-h3{
-  @apply text-xl;
-}
-h4{
-  @apply text-lg;
-}
-h5{
-  @apply text-base;
-}
-h6{
-  @apply text-sm;
+
+html{
+  font-family: inherit;
 }
 
 [class^='info-box']{

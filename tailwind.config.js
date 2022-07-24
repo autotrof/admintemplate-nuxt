@@ -18,9 +18,10 @@ module.exports = {
         'spin-slow': 'spin 2s linear infinite',
       },
       fontFamily:{
-        rajdhani:['Rajdhani', 'sans-serif']
+        rajdhani:['Rajdhani', 'sans-serif'],
+        sourcesanspro: ['"Source Sans Pro"', 'sans-serif']
       }
-    },
+    }
   },
   plugins: [],
 }
