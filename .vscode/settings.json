@@ -1,7 +1,5 @@
 {
   "nuxt.isNuxtApp": true,
-  "css.lint.unknownAtRules": "ignore",
-  "*.css": "tailwindcss",
   "files.associations": {
     "*.css": "tailwindcss"
   },
@@ -11,5 +9,6 @@
   "tailwindCSS.files.exclude":[
     "**/.git/**", "**/node_modules/**", "**/.hg/**", "**/public/**"
   ],
-  "tailwindCSS.emmetCompletions": true
+  "tailwindCSS.emmetCompletions": true,
+  "css.lint.unknownAtRules": "ignore"
 }

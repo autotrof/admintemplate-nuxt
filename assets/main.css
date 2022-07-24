@@ -168,6 +168,9 @@ html{
 .alert{
   @apply w-full rounded-md py-3 px-5 overflow-hidden flex items-start;
 }
+.alert .icon{
+  @apply bg-white;
+}
 .alert .title,.alert .description{
   @apply text-white;
 }
@@ -188,6 +191,14 @@ html{
 }
 .alert.primary.bordered{
   @apply border-primary;
+}
+.alert.primary.outlined .icon,
+.alert.primary.bordered .icon,
+.alert.primary.soft .icon{
+  @apply bg-primary;
+}
+.alert.primary .icon svg{
+  @apply text-primary;
 }
 .alert.primary.bordered .title{
   @apply text-primary-dark;
@@ -210,6 +221,14 @@ html{
 }
 .alert.secondary.bordered{
   @apply border-secondary;
+}
+.alert.secondary.outlined .icon,
+.alert.secondary.bordered .icon,
+.alert.secondary.soft .icon{
+  @apply bg-secondary;
+}
+.alert.secondary .icon svg{
+  @apply text-secondary;
 }
 .alert.secondary.bordered .title{
   @apply text-secondary-dark;
@@ -236,6 +255,14 @@ html{
 .alert.warning.bordered{
   @apply border-warning;
 }
+.alert.warning.outlined .icon,
+.alert.warning.bordered .icon,
+.alert.warning.soft .icon{
+  @apply bg-warning;
+}
+.alert.warning .icon svg{
+  @apply text-warning;
+}
 .alert.warning.bordered .title{
   @apply text-warning-dark;
 }
@@ -258,6 +285,14 @@ html{
 .alert.danger.bordered{
   @apply border-danger;
 }
+.alert.danger.outlined .icon,
+.alert.danger.bordered .icon,
+.alert.danger.soft .icon{
+  @apply bg-danger;
+}
+.alert.danger .icon svg{
+  @apply text-danger;
+}
 .alert.danger.bordered .title{
   @apply text-danger-dark;
 }
@@ -279,6 +314,14 @@ html{
 }
 .alert.success.bordered{
   @apply border-success;
+}
+.alert.success.outlined .icon,
+.alert.success.bordered .icon,
+.alert.success.soft .icon{
+  @apply bg-success;
+}
+.alert.success .icon svg{
+  @apply text-success;
 }
 .alert.success.bordered .title{
   @apply text-success-dark;
@@ -305,6 +348,14 @@ html{
 .alert.info.bordered{
   @apply border-info;
 }
+.alert.info.outlined .icon,
+.alert.info.bordered .icon,
+.alert.info.soft .icon{
+  @apply bg-info;
+}
+.alert.info .icon svg{
+  @apply text-info;
+}
 .alert.info.bordered .title{
   @apply text-info-dark;
 }
@@ -325,5 +376,16 @@ html{
   @apply text-gray-600 outline-none active:outline-none p-0 m-0;
 }
 .alert .btn-close svg{
-  @apply w-4 h-4;
+  @apply w-4 h-4 translate-y-1;
+}
+.alert .icon{
+  @apply rounded-full p-1 mr-2 translate-y-1;
+}
+.alert .icon svg{
+  @apply w-2 h-2 stroke-[5];
+}
+.alert.soft .icon svg,
+.alert.outlined .icon svg,
+.alert.bordered .icon svg{
+  @apply text-white;
 }
