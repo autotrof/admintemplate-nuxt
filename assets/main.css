@@ -193,6 +193,41 @@ html{
 .alert .title,.alert .description{
   @apply text-white;
 }
+
+.alert .alert-content{
+  @apply flex-1;
+}
+.alert .btn-close{
+  @apply outline-none active:outline-none p-0 m-0;
+}
+.alert .btn-close:hover svg{
+  @apply stroke-[4];
+}
+.alert .btn-close svg{
+  @apply w-4 h-4 translate-y-1 duration-100 text-gray-50;
+}
+.alert.bordered .btn-close svg,
+.alert.soft .btn-close svg,
+.alert.outlined .btn-close svg
+{
+  @apply text-slate-600;
+}
+.alert .btn-close:active svg{
+  @apply stroke-[5] stroke-white;
+}
+.alert.bordered .btn-close:active svg,
+.alert.soft .btn-close:active svg,
+.alert.outlined .btn-close:active svg
+{
+  @apply stroke-slate-800;
+}
+.alert .icon{
+  @apply rounded-full p-1 mr-2 translate-y-1;
+}
+.alert .icon svg{
+  @apply w-2 h-2 stroke-[5];
+}
+
 .alert.bordered .description{
   @apply text-gray-800;
 }
@@ -293,8 +328,11 @@ html{
 .alert.warning{
   @apply bg-warning;
 }
-.alert.warning .title,.alert.warning .description{
-  @apply text-gray-700;
+.alert.warning .icon{
+  @apply bg-gray-700;
+}
+.alert.warning .btn-close:active svg{
+  @apply stroke-gray-900;
 }
 .alert.warning.soft,.alert.warning.outlined{
   @apply bg-warning-extra-light;
@@ -386,8 +424,11 @@ html{
 .alert.info{
   @apply bg-info;
 }
-.alert.info .title,.alert.info .description{
-  @apply text-gray-700;
+.alert.info .icon{
+  @apply bg-gray-700;
+}
+.alert.info .btn-close:active svg{
+  @apply stroke-gray-900;
 }
 .alert.info.soft,.alert.info.outlined{
   @apply bg-info-extra-light;
@@ -419,29 +460,18 @@ html{
 .alert.bordered{
   @apply border-l-[4px] bg-white shadow-md;
 }
-.alert .alert-content{
-  @apply flex-1;
-}
-.alert .btn-close{
-  @apply text-gray-600 outline-none active:outline-none p-0 m-0;
-}
-.alert .btn-close svg{
-  @apply w-4 h-4 translate-y-1 duration-100;
-}
-.alert .btn-close:hover svg{
-  @apply stroke-[4];
-}
-.alert .btn-close:active svg{
-  @apply stroke-[5];
-}
-.alert .icon{
-  @apply rounded-full p-1 mr-2 translate-y-1;
-}
-.alert .icon svg{
-  @apply w-2 h-2 stroke-[5];
-}
+
 .alert.soft .icon svg,
 .alert.outlined .icon svg,
 .alert.bordered .icon svg{
   @apply text-white;
+}
+
+.alert.warning .title,
+.alert.warning .description,
+.alert.warning .btn-close svg,
+.alert.info .title,
+.alert.info .description,
+.alert.info .btn-close svg{
+  @apply text-gray-700;
 }

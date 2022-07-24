@@ -379,6 +379,7 @@
           <strong class="title">Primary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert secondary outlined mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -386,6 +387,7 @@
           <strong class="title">Secondary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert accent outlined mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -393,6 +395,7 @@
           <strong class="title">Accent alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert warning outlined mb-2">
         <div class="icon" v-html="$feather['alert-triangle'].toSvg()"></div>
@@ -400,6 +403,7 @@
           <strong class="title">Warning alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert danger outlined mb-2">
         <div class="icon" v-html="$feather.x.toSvg()"></div>
@@ -407,6 +411,7 @@
           <strong class="title">Danger alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert success outlined mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -414,6 +419,7 @@
           <strong class="title">Success alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert info outlined mb-2">
         <div class="icon" v-html="$feather.info.toSvg()"></div>
@@ -421,6 +427,7 @@
           <strong class="title">Info alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
 
 
@@ -431,6 +438,7 @@
           <strong class="title">Primary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert secondary mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -438,6 +446,7 @@
           <strong class="title">Secondary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert accent mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -445,6 +454,7 @@
           <strong class="title">Accent alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert warning mb-2">
         <div class="icon" v-html="$feather['alert-triangle'].toSvg()"></div>
@@ -452,6 +462,7 @@
           <strong class="title">Warning alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert danger mb-2">
         <div class="icon" v-html="$feather.x.toSvg()"></div>
@@ -459,6 +470,7 @@
           <strong class="title">Danger alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert success mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -466,6 +478,7 @@
           <strong class="title">Success alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert info mb-2">
         <div class="icon" v-html="$feather.info.toSvg()"></div>
@@ -473,6 +486,7 @@
           <strong class="title">Info alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
 
 
@@ -482,6 +496,7 @@
           <strong class="title">Primary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert secondary bordered mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -489,6 +504,7 @@
           <strong class="title">Secondary alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert accent bordered mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -496,6 +512,7 @@
           <strong class="title">Accent alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert warning bordered mb-2">
         <div class="icon" v-html="$feather['alert-triangle'].toSvg()"></div>
@@ -503,6 +520,7 @@
           <strong class="title">Warning alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert danger bordered mb-2">
         <div class="icon" v-html="$feather.x.toSvg()"></div>
@@ -510,6 +528,7 @@
           <strong class="title">Danger alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert success bordered mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -517,6 +536,7 @@
           <strong class="title">Success alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert info bordered mb-2">
         <div class="icon" v-html="$feather.info.toSvg()"></div>
@@ -524,6 +544,7 @@
           <strong class="title">Info alert</strong>
           <p class="description"> Thank you for joining our newsletter </p>
         </div>
+        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
 
 
