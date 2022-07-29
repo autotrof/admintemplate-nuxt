@@ -1,5 +1,5 @@
 .alert{
-  @apply w-full rounded-md py-3 px-5 overflow-hidden flex items-start;
+  @apply w-full rounded-md py-3 px-5 overflow-hidden flex items-start duration-200;
 }
 .alert .icon{
   @apply bg-white;

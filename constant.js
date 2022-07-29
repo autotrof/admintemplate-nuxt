@@ -25,18 +25,18 @@ module.exports = {
         'extra-light':colors.red[100]
     },
     success:{
-      DEFAULT:colors.green[500],
-      light:colors.green[400],
-      dark:colors.green[600],
-      'extra-dark':colors.green[800],
-      'extra-light':colors.green[100]
+      DEFAULT:colors.emerald[500],
+      light:colors.emerald[400],
+      dark:colors.emerald[600],
+      'extra-dark':colors.emerald[800],
+      'extra-light':colors.emerald[100]
     },
     info:{
-      DEFAULT:colors.sky[400],
-      light:colors.sky[300],
-      dark:colors.sky[500],
-      'extra-dark':colors.sky[700],
-      'extra-light':colors.sky[100]
+      DEFAULT: '#81cbf5',
+      light: '#b7e1f9',
+      dark: '#4bb4f1',
+      'extra-dark': '#3887b5',
+      'extra-light': '#d2ecfc'
     },
     primary:{
       DEFAULT:colors.indigo[500],

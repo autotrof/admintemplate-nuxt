@@ -1,3 +1,26 @@
+<script>
+export default {
+  data(){
+    return {
+      availableAlertClass:[
+        'primary',
+        'secondary',
+        'success',
+        'info',
+        'warning',
+        'danger',
+        'accent',
+      ],
+      availableAlertTypes:[
+        '',
+        'soft',
+        'outlined',
+        'bordered',
+      ]
+    }
+  }
+}
+</script>
 <template>
   <div class="p-4">
     <div class="w-ful mb-2">
@@ -6,6 +29,7 @@
     <div>
       <h5>INFO BOX 1</h5>
     </div>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-2">
       <div class="info-box1 primary">
         <div class="icon-wrapper" v-html="$feather['message-square'].toSvg()"></div>
@@ -322,6 +346,18 @@
     <div>
       <h5>ALERT</h5>
     </div>
+    <div v-for="t in availableAlertTypes" :key="t" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-2">
+      <Alert class="mb-2"
+        v-for="c in availableAlertClass"
+        :key="`${t}-${c}`"
+        :type="`${t} ${c}`"
+        :enableIcon="true"
+        :closable="true">
+        <strong class="title">{{c}} alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </Alert>
+    </div>
+    <!--
     <div>
       <div class="alert primary soft mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
@@ -489,15 +525,10 @@
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
 
-
-      <div class="alert primary bordered mb-2">
-        <div class="icon" v-html="$feather.check.toSvg()"></div>
-        <div class="alert-content">
-          <strong class="title">Primary alert</strong>
-          <p class="description"> Thank you for joining our newsletter </p>
-        </div>
-        <button class="btn-close" v-html="$feather.x.toSvg()"></button>
-      </div>
+      <Alert type="primary bordered" class="mb-2" :enableIcon="true" :closable="true">
+        <strong class="title">Primary alert</strong>
+        <p class="description"> Thank you for joining our newsletter </p>
+      </Alert>
       <div class="alert secondary bordered mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
         <div class="alert-content">
@@ -613,57 +644,56 @@
       <div class="alert primary soft mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Primary alert</strong>
+          <p class="description"> This is <strong>Primary Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert secondary soft mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Secondary alert</strong>
+          <p class="description"> This is <strong>Secondary Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert accent soft mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Accent alert</strong>
+          <p class="description"> This is <strong>Accent Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert warning soft mb-2">
         <div class="icon" v-html="$feather['alert-triangle'].toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Warning alert</strong>
+          <p class="description"> This is <strong>Warning Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert danger soft mb-2">
         <div class="icon" v-html="$feather.x.toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Danger alert</strong>
+          <p class="description"> This is <strong>Danger Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert success soft mb-2">
         <div class="icon" v-html="$feather.check.toSvg()"></div>
         <div class="alert-content">
-          <strong class="title">Success alert</strong>
+          <p class="description"> This is <strong>Success Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
       <div class="alert info soft mb-2">
-        <div class="icon" v-html="$feather.info.toSvg()"></div>
+        <div class="icon">
+
+        </div>
         <div class="alert-content">
-          <strong class="title">Info alert</strong>
+          <p class="description"> This is <strong>Info Alert</strong></p>
         </div>
         <button class="btn-close" v-html="$feather.x.toSvg()"></button>
       </div>
     </div>
+
+-->
   </div>
-
 </template>
-
-<style>
-
-</style>

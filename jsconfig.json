@@ -2,7 +2,22 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "~~/*": [
+        "./*"
+      ],
+      "@@/*": [
+        "./*"
+      ]
+    }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules",".nuxt","public","static"]
 }
